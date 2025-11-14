@@ -1,3 +1,7 @@
+const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.createServer(app);
 const { Server } = require("socket.io");
 
 const io = new Server({
@@ -5,6 +9,16 @@ const io = new Server({
         origin: "*"
     }
 });
+
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.write(`<h1>Socket IO Start on Port : ${PORT}</h1>`);
+    res.end();
+});
+
+
+
 
 let content = {
     now: "NOW EVENT",
@@ -62,4 +76,6 @@ io.on("connection", (s) => {
     })
 });
 
-io.listen(3000)
+server.listen(PORT, () => {
+    console.log('listening on *:3000');
+});
