@@ -19,12 +19,73 @@ app.get('/', (req, res) => {
     res.end();
 });
 
-
-
-
 let content = {
-    now: "NOW EVENT",
-    next: "NEXT EVENT"
+    "space1": {
+        "title": "Space 1",
+        "now": {
+            "title": "Test 1",
+            "subtitle": "Group A"
+        },
+        "next": {
+            "title": "Test 2",
+            "subtitle": "Group B"
+        }
+    },
+    "space2": {
+        "title": "Space 2",
+        "now": {
+            "title": "Test 3",
+            "subtitle": "Group C"
+        },
+        "next": {
+            "title": "Test 4",
+            "subtitle": "Group D"
+        }
+    },
+    "space3": {
+        "title": "Space 3",
+        "now": {
+            "title": "Test 5",
+            "subtitle": "Group E"
+        },
+        "next": {
+            "title": "Test 6",
+            "subtitle": "Group F"
+        }
+    },
+    "space4": {
+        "title": "Space 4",
+        "now": {
+            "title": "Test 7",
+            "subtitle": "Group G"
+        },
+        "next": {
+            "title": "Test 8",
+            "subtitle": "Group H"
+        }
+    },
+    "space5": {
+        "title": "Space 5",
+        "now": {
+            "title": "Test 9",
+            "subtitle": "Group I"
+        },
+        "next": {
+            "title": "Test 10",
+            "subtitle": "Group J"
+        }
+    },
+    "space6": {
+        "title": "Space 6",
+        "now": {
+            "title": "Test 11",
+            "subtitle": "Group K"
+        },
+        "next": {
+            "title": "Test 12",
+            "subtitle": "Group L"
+        }
+    }
 }
 
 const users = []
@@ -75,6 +136,7 @@ io.on("connection", (s) => {
         setUserRoom(s.id, d.room);
 
         s.to(d.room).emit("room-status", { msg:`${s.id} joined`, count: getUsersInRoom(d.room) });
+        s.emit("init-load", content);
     })
 });
 
