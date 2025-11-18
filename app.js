@@ -101,8 +101,12 @@ const setUserRoom = (id, room) => {
     u.room = room;
     users[foundIndex] = u;
 }
-const getUsersInRoom = (room) => {
+const getUsersInRoomCount = (room) => {
     return users.filter(u => u.room == room).length;
+}
+
+const getUsersInRoom = (room) => {
+    return users.filter(u => u.room == room);
 }
 
 const setUserRole = (id, role) => {
@@ -136,7 +140,8 @@ io.on("connection", (s) => {
         setUserRole(s.id, d.role);
         setUserRoom(s.id, d.room);
 
-        s.to(d.room).emit("room-status", { msg:`${s.id} joined`, count: getUsersInRoom(d.room) });
+        s.emit("room-status", { count: getUsersInRoomCount(d.room), users: getUsersInRoom(d.room) });
+        s.to(d.room).emit("room-status", { msg:`${s.id} joined`, count: getUsersInRoomCount(d.room), users: getUsersInRoom(d.room) });
         s.emit("init-load", content[d.room]);
     })
 });
