@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
 });
 
 let content = {
+    "NDST3": {
     "space1": {
         "title": "Space 1",
         "now": {
@@ -86,6 +87,7 @@ let content = {
             "subtitle": "Group L"
         }
     }
+    }
 }
 
 const users = []
@@ -114,8 +116,7 @@ const setUserRole = (id, role) => {
 
 io.on("connection", (s) => {
     users.push({id: s.id, room: "", role: ""});
-    s.emit("update", content);
-
+    
     // DISCONNECT LOGIC
     s.on('disconnect', function() {
         const index = users.findIndex(x => x.id == s.id);
@@ -123,10 +124,10 @@ io.on("connection", (s) => {
     });
 
     s.on("save", (c) => {
-        content = c.data;
         let roomName = getUserRoom(s.id)
+        content[roomName] = c.data;
         console.log(roomName)
-        s.to(roomName).emit("update", content);
+        s.to(roomName).emit("update", content[roomName]);
     })
 
     s.on("room-request", (d) => {
@@ -136,7 +137,7 @@ io.on("connection", (s) => {
         setUserRoom(s.id, d.room);
 
         s.to(d.room).emit("room-status", { msg:`${s.id} joined`, count: getUsersInRoom(d.room) });
-        s.emit("init-load", content);
+        s.emit("init-load", content[d.room]);
     })
 });
 
