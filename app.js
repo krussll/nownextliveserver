@@ -23,71 +23,321 @@ let content = {
     "NDST3": {
     "space1": {
         "title": "Space 1",
-        "now": {
-            "title": "Test 1",
-            "subtitle": "Group A"
-        },
-        "next": {
-            "title": "Test 2",
-            "subtitle": "Group B"
-        }
+        "sessions": [
+            {
+                "title": "Test 1",
+                "subtitle": "Group A",
+                "time": ""
+            },
+            {
+                "title": "Test 2",
+                "subtitle": "Group B",
+                "time": ""
+            },
+            {
+                "title": "Test 3",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "Test 4",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 2
     },
     "space2": {
         "title": "Space 2",
-        "now": {
-            "title": "Test 3",
-            "subtitle": "Group C"
-        },
-        "next": {
-            "title": "Test 4",
-            "subtitle": "Group D"
-        }
+        "sessions": [
+            {
+                "title": "Test 3",
+                "subtitle": "Group C",
+                "time": ""
+            },
+            {
+                "title": "Test 4",
+                "subtitle": "Group D",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 1
     },
     "space3": {
         "title": "Space 3",
-        "now": {
-            "title": "Test 5",
-            "subtitle": "Group E"
-        },
-        "next": {
-            "title": "Test 6",
-            "subtitle": "Group F"
-        }
+        "sessions": [
+            {
+                "title": "Test 5",
+                "subtitle": "Group E",
+                "time": ""
+            },
+            {
+                "title": "Test 6",
+                "subtitle": "Group F",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 1
     },
     "space4": {
         "title": "Space 4",
-        "now": {
-            "title": "Test 7",
-            "subtitle": "Group G"
-        },
-        "next": {
-            "title": "Test 8",
-            "subtitle": "Group H"
-        }
+        "sessions": [
+            {
+                "title": "Test 7",
+                "subtitle": "Group G",
+                "time": ""
+            },
+            {
+                "title": "Test 8",
+                "subtitle": "Group H",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 1
     },
     "space5": {
         "title": "Space 5",
-        "now": {
-            "title": "Test 9",
-            "subtitle": "Group I"
-        },
-        "next": {
-            "title": "Test 10",
-            "subtitle": "Group J"
-        }
+        "sessions": [
+            {
+                "title": "Test 9",
+                "subtitle": "Group I",
+                "time": ""
+            },
+            {
+                "title": "Test 10",
+                "subtitle": "Group J",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 0
     },
     "space6": {
         "title": "Space 6",
-        "now": {
-            "title": "Test 11",
-            "subtitle": "Group K"
-        },
-        "next": {
-            "title": "Test 12",
-            "subtitle": "Group L"
-        }
-    }
-    }
+        "sessions": [
+            {
+                "title": "Test 11",
+                "subtitle": "Group K",
+                "time": ""
+            },
+            {
+                "title": "Test 12",
+                "subtitle": "Group L",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 0
+    },
+    "title": "North District Sports"
+},
+"YT4E3": {
+    "space1": {
+        "title": "Space 1",
+        "sessions": [
+            {
+                "title": "Test 1",
+                "subtitle": "Group A",
+                "time": ""
+            },
+            {
+                "title": "Test 2",
+                "subtitle": "Group B",
+                "time": ""
+            },
+            {
+                "title": "Test 3",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "Test 4",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 0
+    },
+    "space2": {
+        "title": "Space 2",
+        "sessions": [
+            {
+                "title": "Test 3",
+                "subtitle": "Group C",
+                "time": ""
+            },
+            {
+                "title": "Test 4",
+                "subtitle": "Group D",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 0
+    },
+    "space3": {
+        "title": "Space 3",
+        "sessions": [
+            {
+                "title": "Test 5",
+                "subtitle": "Group E",
+                "time": ""
+            },
+            {
+                "title": "Test 6",
+                "subtitle": "Group F",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 0
+    },
+    "space4": {
+        "title": "Space 4",
+        "sessions": [
+            {
+                "title": "Test 7",
+                "subtitle": "Group G",
+                "time": ""
+            },
+            {
+                "title": "Test 8",
+                "subtitle": "Group H",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 0
+    },
+    "space5": {
+        "title": "Space 5",
+        "sessions": [
+            {
+                "title": "Test 9",
+                "subtitle": "Group I",
+                "time": ""
+            },
+            {
+                "title": "Test 10",
+                "subtitle": "Group J",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 0
+    },
+    "space6": {
+        "title": "Space 6",
+        "sessions": [
+            {
+                "title": "Test 11",
+                "subtitle": "Group K",
+                "time": ""
+            },
+            {
+                "title": "Test 12",
+                "subtitle": "Group L",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            },
+            {
+                "title": "",
+                "subtitle": "",
+                "time": ""
+            }
+        ],
+        "nowIndex": 0
+    },
+    "title": "North District Sports"
+}
 }
 
 const users = []
